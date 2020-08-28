@@ -1,0 +1,228 @@
+title: Homepage
+sections:
+  intro:
+    display: Intro
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+      -
+        handle: image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          listable: hidden
+          display: Image
+      -
+        handle: intro
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          listable: hidden
+          display: Introduction
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+  description:
+    display: Description
+    fields:
+      -
+        handle: resume
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          listable: hidden
+          display: Résumé
+  expertise:
+    display: Expertise
+    fields:
+      -
+        handle: content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          listable: hidden
+          display: Contenu
+  projets:
+    display: Projets
+    fields:
+      -
+        handle: projects
+        field:
+          sets:
+            projet:
+              display: Projet
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    type: text
+                    listable: hidden
+                    display: Nom
+                -
+                  handle: description
+                  field:
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    type: markdown
+                    listable: hidden
+                    display: Description
+                -
+                  handle: url
+                  field:
+                    type: link
+                    listable: hidden
+                    display: URL
+          type: replicator
+          listable: hidden
+          display: Projets
+  competences:
+    display: Compétences
+    fields:
+      -
+        handle: skill_domain
+        field:
+          sets:
+            domaine_de_competence:
+              display: 'Domaine de compétence'
+              fields:
+                -
+                  handle: nom
+                  field:
+                    input_type: text
+                    type: text
+                    listable: hidden
+                    display: Nom
+                -
+                  handle: skills
+                  field:
+                    sets:
+                      competence:
+                        display: Compétence
+                        fields:
+                          -
+                            handle: name
+                            field:
+                              input_type: text
+                              type: text
+                              listable: hidden
+                              display: Nom
+                          -
+                            handle: url
+                            field:
+                              type: link
+                              listable: hidden
+                              display: URL
+                    type: replicator
+                    listable: hidden
+                    display: Compétences
+          type: replicator
+          listable: hidden
+          display: 'Domaine de compétence'
+  temoignages:
+    display: Témoignages
+    fields:
+      -
+        handle: testimonials
+        field:
+          sets:
+            temoignage:
+              display: Témoignage
+              fields:
+                -
+                  handle: content
+                  field:
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    type: markdown
+                    listable: hidden
+                    display: Contenu
+                -
+                  handle: author
+                  field:
+                    input_type: text
+                    type: text
+                    listable: hidden
+                    display: Auteur
+                -
+                  handle: url
+                  field:
+                    type: link
+                    listable: hidden
+                    display: URL
+          type: replicator
+          listable: hidden
+          display: Témoignages
+  contact:
+    display: Contact
+    fields:
+      -
+        handle: contact
+        field:
+          sets:
+            contact:
+              display: Contact
+              fields:
+                -
+                  handle: nom
+                  field:
+                    input_type: text
+                    type: text
+                    listable: hidden
+                    display: Nom
+                -
+                  handle: icon
+                  field:
+                    input_type: text
+                    type: text
+                    listable: hidden
+                    display: Icône
+                -
+                  handle: url
+                  field:
+                    type: link
+                    listable: hidden
+                    display: URL
+          type: replicator
+          listable: hidden
+          display: Contact
