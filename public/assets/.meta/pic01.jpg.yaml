@@ -1,5 +1,6 @@
-data: {  }
+data:
+  alt: 'C''est moi, Marceau'
 size: 36458
-last_modified: 1598653338
+last_modified: 1599159918
 width: 400
 height: 618

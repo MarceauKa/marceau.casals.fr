@@ -62,6 +62,16 @@ sections:
           type: markdown
           listable: hidden
           display: Résumé
+      -
+        handle: background
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          listable: hidden
+          display: Background
   expertise:
     display: Expertise
     fields:
@@ -117,14 +127,14 @@ sections:
     display: Compétences
     fields:
       -
-        handle: skill_domain
+        handle: skill_domains
         field:
           sets:
             domaine_de_competence:
               display: 'Domaine de compétence'
               fields:
                 -
-                  handle: nom
+                  handle: name
                   field:
                     input_type: text
                     type: text
@@ -197,14 +207,14 @@ sections:
     display: Contact
     fields:
       -
-        handle: contact
+        handle: contacts
         field:
           sets:
             contact:
               display: Contact
               fields:
                 -
-                  handle: nom
+                  handle: name
                   field:
                     input_type: text
                     type: text
@@ -223,6 +233,12 @@ sections:
                     type: link
                     listable: hidden
                     display: URL
+                -
+                  handle: new_window
+                  field:
+                    type: toggle
+                    listable: hidden
+                    display: 'Nouvelle fenêtre'
           type: replicator
           listable: hidden
-          display: Contact
+          display: Contacts

@@ -1,0 +1,13 @@
+title: Configuration
+data:
+  title: 'Marceau Casals - Développeur web full-stack à Toulouse'
+  description: 'Développeur web full-stack expert Laravel et Vue.js à Toulouse et dans le monde'
+  footer: '&copy; Marceau Casals.'
+  analytics: |
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54326193-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-54326193-1');
+    </script>
