@@ -46,7 +46,7 @@
                     <tbody>
                     {{ projects }}
                         <tr>
-                            <td><a href="{{ url }}" target="_blank">{{ name }}</a></td>
+                            <td><a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a></td>
                             <td>{{ description | raw }}</td>
                         </tr>
                     {{ /projects }}
@@ -75,7 +75,7 @@
             {{ testimonials }}
                 <blockquote>
                     {{ content | raw }}
-                    &mdash; <a href="{{ url }}" rel="nofollow" target="_blank">{{ author }}</a>
+                    &mdash; <a href="{{ url }}" rel="nofollow noopener" target="_blank">{{ author }}</a>
                 </blockquote>
             {{ /testimonials }}
         </div>
@@ -90,7 +90,7 @@
                 <ul class="contact-icons color1">
                     {{ contacts }}
                         <li class="icon {{ icon }}">
-                            <a href="{{ url }}" {{ if new_window }}target="_blank"{{ /if }}>{{ name }}</a>
+                            <a href="{{ url }}" {{ if new_window }}target="_blank"{{ /if }} rel="noopener">{{ name }}</a>
                         </li>
                     {{ /contacts }}
                 </ul>
