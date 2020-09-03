@@ -1,10 +1,3 @@
 ## Marceau Casals
 
-[Visit site](https://marceau.casals.fr)
-
-The old site is located at `resources/old`
-
-## Links
-
-- [Statamic Doc](https://statamic.dev)
-- [Statamic Discord](https://statamic.com/discord)
+This is my personal website [marceau.casals.fr](https://marceau.casals.fr) built with [Statamic 3](https://statamic.com/).
